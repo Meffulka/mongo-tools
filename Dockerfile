@@ -1,7 +1,5 @@
-FROM alpine:3.7
+FROM mongo:4.0
 
-LABEL maintainer="Alekseii Erokhin <zmeffulka@gmail.com>"
-
-RUN apk add --no-cache git coreutils openssh zip mongodb-tools
+RUN apt-get update && apt-get install -y git
 
 CMD /bin/sh
